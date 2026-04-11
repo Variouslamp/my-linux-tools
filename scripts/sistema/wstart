@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Detectar si ya está corriendo (usamos una de las ventanas como referencia)
+if swaymsg -t get_tree | grep -q "start-clock"; then
+    echo "Cerrando entorno..."
+
+    swaymsg '[app_id="start-clock"] kill'
+    swaymsg '[app_id="start-cow"] kill'
+    swaymsg '[app_id="start-fetch"] kill'
+    swaymsg '[app_id="start-tube"] kill'
+
+else
+    echo "Iniciando entorno..."
+
+    kitty --class "start-clock" sh -c "tty-clock -c -s; exec bash" &
+    kitty --class "start-cow" sh -c "cowsay 'I use arch, btw'; exec bash" &
+    kitty --class "start-fetch" sh -c "fastfetch; exec bash" &
+    kitty --class "start-tube" sh -c "bash-pipes; exec bash" &
+
+fi

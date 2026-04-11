@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if swaymsg -t get_tree | grep "float-term"; then
+	swaymsg '[app_id="float-term"] kill'
+else
+	kitty --class float-term &
+fi

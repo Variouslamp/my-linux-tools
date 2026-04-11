@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Seleccion del fondo de manera random
+lista=(~/wallpapers/*)
+numero=$((RANDOM % "${#lista[@]}"))
+imagen_random="${lista[numero]}"
+
+swww img "$imagen_random" --transition-type any --transition-duration 2
+
