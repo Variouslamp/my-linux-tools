@@ -6,7 +6,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    { import = "plugins.neotree" },   -- Tu archivo de Neo-tree
+    { import = "plugins.neotree" },
+    {import= "plugins.theme"},
+    {import= "plugins.polyglot"},
+    {import= "plugins.completado"}
 
   },
 })
