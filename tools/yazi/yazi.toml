@@ -80,7 +80,7 @@ rules = [
 	# Folder
 	#{ url = "*/"},
 	# .txt y .md (specific)
-	{ url = "*.{txt,md,py}", use = "text"},
+	{ url = "*.{txt, py}", use = "text"},
 	# Text(GENERAL)
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Archive
