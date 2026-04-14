@@ -3,7 +3,7 @@ set $mod Mod4
 
 ## --- SIEMPRE EJECUTAR AL INICIO DE LA SESION ---
 exec_always autotiling
-exec swww-daemon
+exec awww-daemon
 exec wal -R -n
 exec swaync
 exec mpd-mpris
