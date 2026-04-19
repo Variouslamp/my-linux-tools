@@ -2,4 +2,4 @@
 
 carpeta="~/wallpapers/"
 selected=$(ls ~/wallpapers/ | rofi -dmenu -p "elije")
-awww img ~/wallpapers/"$selected" --transition-type any --transition-duration 2
+awww img ~/wallpapers/"$selected" --transition-type center --transition-duration 2

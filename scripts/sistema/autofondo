@@ -5,5 +5,5 @@ lista=(~/wallpapers/*)
 numero=$((RANDOM % "${#lista[@]}"))
 imagen_random="${lista[numero]}"
 
-awww img "$imagen_random" --transition-type any --transition-duration 2
+awww img "$imagen_random" --transition-type center --transition-duration 2
 
