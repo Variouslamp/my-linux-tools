@@ -19,7 +19,9 @@ exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 ### --- CONFIGURACIÓN DE ENTRADA (Latam) ---
 input "type:keyboard" {
-    xkb_layout latam
+    # disposicion de teclado en español latino
+    #xkb_layout latam
+    xkb_layout us(altgr-intl)
 }
 
 input "type:touchpad" {
@@ -145,7 +147,7 @@ for_window [app_id="start-tube"] floating enable, move position 10 10, resize se
 # --- Configuración Visual SwayFX ---
 
 # 1. Bordes redondeados
-corner_radius 20
+corner_radius 5
 # 2. Transparencia en ventanas inactivas
 default_dim_inactive 0.2
 # 3. Quita bordes de ventanas 

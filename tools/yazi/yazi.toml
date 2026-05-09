@@ -64,7 +64,7 @@ pdf = [
 imagen = [
 	{ run = 'nsxiv -a "$@"', orphan = true, desc = "Ver Imagen" }
 ]
-video = [{ run = 'vcl "$@"', orphan = true, desc = "Reproducir" }]
+video = [{ run = 'mpv "$@"', orphan = true, desc = "Reproducir" }]
 
 
 [open]
@@ -72,9 +72,10 @@ rules = [
 	# PDF
 	{ url = "*.pdf", use = [ "pdf", "reveal" ] },
 	# IMAGENES
-    	{ mime = "image/*", use = [ "imagen", "reveal" ] },
+  { mime = "image/*", use = [ "imagen", "reveal" ] },
 	# MULTIMEDIA
-    	{ mime = "{audio,video}/*", use = [ "video", "reveal" ] },
+  { mime = "{audio,video}/*", use = [ "video", "reveal" ] },
+	{url = "*.{mp4}", use = ["video"]},
 	#Office
 	{ url = "*.{doc,docx,xls,xlsx,ppt,pptx}", use = [ "office", "reveal" ] },
 	# Folder
