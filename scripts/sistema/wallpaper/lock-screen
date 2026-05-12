@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+WALLPAPER=$(cat ~/my-tools/tools/hypr/current_wallpaper) hyprlock

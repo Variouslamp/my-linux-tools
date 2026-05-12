@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if swaymsg -t get_tree | grep "float-term"; then
-	swaymsg '[app_id="float-term"] kill'
+if hyprctl clients | grep "class: float-term" > /dev/null; then
+    hyprctl dispatch closewindow class:float-term
 else
-	kitty --class float-term &
+    kitty --class float-term &
 fi
