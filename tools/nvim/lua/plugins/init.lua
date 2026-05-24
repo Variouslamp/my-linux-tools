@@ -9,7 +9,13 @@ require("lazy").setup({
     { import = "plugins.neotree" },
     {import= "plugins.theme"},
     {import= "plugins.polyglot"},
-    {import= "plugins.completado"}
+    {import= "plugins.completado"},
+    {import= "plugins.treesitter"},
+    {import= "plugins.bufferline"},
+    {import= "plugins.alpha"},
+    {import= "plugins.lualine"},
+    {import= "plugins.telescope"},
+    {import= "plugins.indent"},
 
   },
 })
