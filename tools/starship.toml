@@ -1,0 +1,33 @@
+format = """
+$time$directory$git_branch$cmd_duration
+$python$character"""
+
+[time]
+disabled = false
+format = "[$time]($style)  "
+time_format = "%H:%M"
+style = "blue"
+
+[directory]
+format = "[$path]($style)  "
+style = "yellow"
+truncation_length = 4
+truncate_to_repo = false
+
+[git_branch]
+format = "[$symbol$branch]($style)  "
+symbol = " "
+style = "cyan"
+
+[cmd_duration]
+format = "[$duration]($style)"
+min_time = 2_000
+style = "red"
+
+[python]
+format = '(${virtualenv}) '
+style = "green"
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
