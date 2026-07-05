@@ -1,0 +1,282 @@
+# ====================================
+# FUENTES Y TEMAS
+# ====================================
+
+# Fuente para japones y CJK
+adobe-source-han-sans-jp-fonts
+# Cursores de GNOME
+adwaita-cursors
+# Tipografias de GNOME
+adwaita-fonts
+# Iconos de GNOME
+adwaita-icon-theme
+# Iconos de respaldo para apps viejas
+adwaita-icon-theme-legacy
+# Iconos Breeze de KDE
+breeze-icons
+# Cursores por defecto
+default-cursors
+# Iconos Font Awesome
+otf-font-awesome
+# Tema de iconos Papirus
+papirus-icon-theme
+# Fuente Carlito
+ttf-carlito
+# Fuente DejaVu
+ttf-dejavu
+# Fuente JetBrains Mono Nerd
+ttf-jetbrains-mono-nerd
+# Fuente Liberation
+ttf-liberation
+# Simbolos Nerd Fonts
+ttf-nerd-fonts-symbols
+# Simbolos Nerd Fonts comunes
+ttf-nerd-fonts-symbols-common
+
+# ====================================
+# SISTEMA Y SESION
+# ====================================
+
+# Bluetooth daemon
+bluez
+# Herramientas de Bluetooth
+bluez-utils
+# Encriptacion de discos
+cryptsetup
+# Soporte DKMS
+dkms
+# Contenedores
+docker
+# Compose para Docker
+docker-compose
+# Arranque UEFI
+efibootmgr
+# Flatpak
+flatpak
+# GRUB
+grub
+# Kernel Linux
+linux
+# Firmware del sistema
+linux-firmware
+# Headers del kernel
+linux-headers
+# Login manager TTY
+ly
+# Generacion de initramfs
+mkinitcpio
+# Utilidades para particiones y discos
+mtools
+# Red y conexiones
+networkmanager
+# Driver NVIDIA DKMS
+nvidia-open-dkms
+# Configuracion NVIDIA
+nvidia-settings
+# Utilidades NVIDIA
+nvidia-utils
+# Utilidades NVIDIA de 32 bits
+lib32-nvidia-utils
+# Herramienta netcat
+openbsd-netcat
+# Comprobacion de arranque EFI
+os-prober
+# Audio moderno
+pipewire
+# Compatibilidad ALSA con PipeWire
+pipewire-alsa
+# Compatibilidad JACK con PipeWire
+pipewire-jack
+# Compatibilidad PulseAudio con PipeWire
+pipewire-pulse
+# Agente de polkit para escritorio
+polkit-gnome
+# Arranque seguro
+sbctl
+# Gestor de audio de PipeWire
+wireplumber
+# Portal de escritorio
+xdg-desktop-portal
+# Portal GTK
+xdg-desktop-portal-gtk
+# Gestor de paquetes AUR
+yay
+
+# ====================================
+# ESCRITORIO
+# ====================================
+
+# Automatizacion de splits en Hyprland o Sway
+autotiling
+# Launcher de aplicaciones
+rofi
+# Menu de calendarios
+gsimplecal
+# Gestor de archivos
+thunar
+# Gestor de archivos en terminal
+yazi
+# Visor de imagenes
+nsxiv
+# Terminal GPU
+alacritty
+# Terminal moderno
+kitty
+# Cliente KDE Connect
+kdeconnect
+# Herramienta de brillo
+brightnessctl
+# Control multimedia
+playerctl
+# Control de volumen
+pavucontrol
+# Utilidad para test de input
+evtest
+
+# ====================================
+# TERMINAL Y UTILIDADES
+# ====================================
+
+# Monitor del sistema
+btop
+# Monitor alternativo
+htop
+# Visualizador de ruido en terminal
+cava
+# Fastfetch
+fastfetch
+# Broma clasica
+cowsay
+# Shell principal
+zsh
+# Editor Neovim
+neovim
+# Editor Vim
+vim
+# Paginares simples
+less
+# Buscador rapido
+fd
+# Fuzzy finder
+fzf
+# Navegacion rapida por directorios
+zoxide
+# Utilidades JSON
+jq
+# Resaltado de texto
+highlight
+# Monitoreo de archivos
+inotify-tools
+# API client en terminal
+atac
+# Email client en terminal
+aerc
+# Aplicacion de tecnica pomodoro
+solanum
+# Cliente MPD
+mpc
+# Cliente de red remoto
+rclone
+# Traductor en terminal
+translate-shell
+# Eliminacion segura a la papelera
+trash-cli
+# Generador de previews SVG
+resvg
+# Cliente de red
+nmap
+# Arbol de directorios
+tree
+# Herramienta de visualizacion de paletas
+python-pywal
+# Cliente SSH
+openssh
+# Sudo
+sudo
+
+# ====================================
+# MULTIMEDIA
+# ====================================
+
+# Reproductor multimedia
+mpv
+# Sistema de musica
+mpd
+# Bridge MPRIS para MPD
+mpd-mpris
+# Cliente torrent
+qbittorrent
+# Reproductor de video
+vlc
+# Grabador de pantalla
+gpu-screen-recorder
+# Editor de video KDE
+kdenlive
+# Suite de streaming/grabacion
+obs-studio
+# Gestor de PDF
+zathura
+# Plugin PDF para Zathura
+zathura-pdf-poppler
+# Herramienta de imagenes
+gimp
+# Convertidor/lector de libros
+ebook-tools
+# Utilidad para libros LIT
+convertlit
+
+# ====================================
+# PRODUCTIVIDAD Y ESCRITORIO
+# ====================================
+
+# Navegador web
+firefox
+# Correo electronico
+thunderbird
+# Password manager
+bitwarden
+# Cliente de bases de datos
+dbeaver
+# Editor de diagramas
+drawio-desktop
+# Launcher de minecraft
+prismlauncher
+# Cliente musical en terminal
+rmpc
+# Wine para Windows
+wine-staging
+
+# ====================================
+# DESARROLLO
+# ====================================
+
+# Base de desarrollo
+base-devel
+# Git
+git
+# CMake
+cmake
+# Clang
+clang
+# Ninja
+ninja
+# Autoconf
+autoconf
+# Automake
+automake
+# Bison
+bison
+# Flex
+flex
+# Doxygen
+doxygen
+# Fakeroot
+fakeroot
+# Python pip
+python-pip
+# IPython
+ipython
+# Compilador de paquetes
+pkgconf
+# Generador de arboles syntax
+tree-sitter-cli

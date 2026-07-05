@@ -1,0 +1,29 @@
+# ====================================
+# SISTEMA Y SERVICIOS
+# ====================================
+
+# Snapd
+snapd
+
+# ====================================
+# APLICACIONES Y UTILIDADES
+# ====================================
+
+# Demo y animacion de terminal
+bash-pipes
+# Demo alternativa de terminal
+pipes.sh
+# Portapapeles en Wayland
+clipboard-bin
+# Notion app electron
+notion-app-electron
+# Suite ofimatica
+onlyoffice-bin
+# Cliente de administracion PostgreSQL
+pgadmin4-desktop
+# Lanzador de juegos de Tetrio
+tetrio-desktop
+# Reloj para terminal
+tty-clock
+# Editor de codigo
+visual-studio-code-bin

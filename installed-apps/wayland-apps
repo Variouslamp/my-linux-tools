@@ -1,0 +1,41 @@
+# ====================================
+# HYPRLAND
+# ====================================
+
+# Compositor Wayland
+hyprland
+# Bloqueo de Hyprland
+hyprlock
+# Idle daemon de Hyprland
+hypridle
+# Utilidades del ecosistema Hyprland
+quickshell
+
+# ====================================
+# WAYLAND GENERAL
+# ====================================
+
+# Launcher alternativo
+wofi
+# Barra superior
+waybar
+# Notificaciones de escritorio
+mako
+# Wallpaper manager
+awww
+
+# Portapapeles para Wayland
+clipboard-bin
+# Historial de portapapeles
+cliphist
+# Captura de pantalla
+grim
+# Seleccion de region
+slurp
+# Grabacion en Wayland
+wf-recorder
+# Inspeccion de eventos Wayland
+wev
+
+# Portal Wayland para wlroots
+xdg-desktop-portal-wlr

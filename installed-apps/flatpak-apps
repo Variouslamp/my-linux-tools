@@ -1,0 +1,22 @@
+# ====================================
+# NAVEGACION
+# ====================================
+
+# Navegador web
+app.zen_browser.zen
+
+# ====================================
+# MENSAJERIA Y COMUNIDAD
+# ====================================
+
+# Discord
+com.discordapp.Discord
+# Cliente de WhatsApp
+com.rtosta.zapzap
+
+# ====================================
+# JUEGOS
+# ====================================
+
+# Launcher de juegos
+com.heroicgameslauncher.hgl
