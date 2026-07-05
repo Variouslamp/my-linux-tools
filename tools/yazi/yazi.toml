@@ -36,9 +36,6 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 edit = [
 	{ run = "nvim $@", desc = "Edit",  for = "unix", block = true },
 ]
-text = [
-    { run = 'micro "$@"', desc = "Edit with Micro", block = true, for = "linux" },
-]
 play = [
 	{ run = "xdg-open %s1",    desc = "Play", for = "linux", orphan = true },
 ]
@@ -81,7 +78,7 @@ rules = [
 	# Folder
 	#{ url = "*/"},
 	# .txt y .md (specific)
-	{ url = "*.{txt, py}", use = "text"},
+	{ url = "*.{txt, py}", use = "edit"},
 	# Text(GENERAL)
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Archive
