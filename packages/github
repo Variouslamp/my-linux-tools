@@ -1,0 +1,4 @@
+# Intalaciones de repositorios github
+
+# yay gestor de paquetes de aur
+git clone https://aur.archlinux.org/yay.git

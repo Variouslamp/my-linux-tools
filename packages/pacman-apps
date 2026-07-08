@@ -99,8 +99,6 @@ wireplumber
 xdg-desktop-portal
 # Portal GTK
 xdg-desktop-portal-gtk
-# Gestor de paquetes AUR
-yay
 
 # ====================================
 # ESCRITORIO
