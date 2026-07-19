@@ -1,16 +1,21 @@
 # Configuracion de zsh
-#
+
 stty -ixon
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
-
 eval "$(starship init zsh)"
+
+# Definicion de variables de entorno
+
 export EDITOR=nvim
 export VISUAL=nvim
+export BROWSER=zen-browser
+
+# Definicion de paths especificos
+#
 export PATH="$HOME/.local/bin:$PATH"
 
 . "$HOME/.cargo/env"

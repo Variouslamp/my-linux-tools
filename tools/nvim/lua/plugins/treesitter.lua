@@ -11,7 +11,7 @@ return {
           "python", "lua", "vim", "vimdoc", "bash",
           "markdown", "markdown_inline", "yaml", "toml",
           "json", "html", "css", "javascript", "typescript",
-          "django", "sql", "rust",
+          "sql", "rust", "c",
         })
       end, 0)
     end,
