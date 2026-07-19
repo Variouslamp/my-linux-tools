@@ -29,4 +29,4 @@ fi
 
 if [ -n "$(command -v hyprlock)" ]; then
 	$HOME/my-tools/scripts/sistema/wallpaper/set_hyprlock_wallpaper_name.sh $WAL_DIRECTORY/$SELECTED
-
+fi
