@@ -5,12 +5,16 @@ return {
     "MunifTanjim/nui.nvim",
     "nvim-tree/nvim-web-devicons",
   },
-  config = function()
-    require("neo-tree").setup({
-      filesystem = {
-        follow_current_file = true,
-        hijack_netrw_behavior = "open_default",
+  opts = {
+    window = {
+      position = "right", -- Esto moverá tu neotree a la derecha
+    },
+    filesystem = {
+      follow_current_file = {
+        enabled = true,   -- Versión corregida para evitar advertencias de Neovim
       },
-    })
-  end,
+      hijack_netrw_behavior = "open_default",
+    },
+  },
 }
+
