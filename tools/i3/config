@@ -64,7 +64,8 @@ bindsym $mod+r exec "firefox -P WSP https://web.whatsapp.com/"
 # arajos de cambio de fondo
 bindsym $mod+w exec $HOME/my-linux-tools/scripts/sistema/wallpaper/wallpaper_setter.sh rofi
 bindsym $mod+Shift+w exec $HOME/my-linux-tools/scripts/sistema/wallpaper/wallpaper_setter.sh auto
-
+# Captura de área seleccionada con el ratón (Presionando Shift + Print)
+bindsym $mod+s exec --no-startup-id "cd ~/images/screenshots/ && scrot -s '%Y-%m-%d-%H%M%S_screenshot.png'"
 
 # start a terminal
 bindsym $mod+q exec alacritty
@@ -107,7 +108,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
 # bindsym $mod+e layout toggle split
 
