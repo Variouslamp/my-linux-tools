@@ -6,7 +6,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    { import = "plugins.neotree" },
+    {import= "plugins.neotree" },
     {import= "plugins.theme"},
     {import= "plugins.polyglot"},
     {import= "plugins.completado"},
@@ -16,7 +16,9 @@ require("lazy").setup({
     {import= "plugins.lualine"},
     {import= "plugins.telescope"},
     {import= "plugins.indent"},
-
+    {import= "plugins.mason"},
+    {import= "plugins.mason-lspconfig"},
+    {import= "plugins.lspconfig"}, 
   },
 })
 

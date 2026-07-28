@@ -4,3 +4,6 @@ require("core.keymaps")
 
 -- Cargamos el gestor de plugins
 require("plugins")
+
+-- configuracion de LSP
+require("core.lsp")
