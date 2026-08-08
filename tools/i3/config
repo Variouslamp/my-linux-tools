@@ -9,6 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+
 # Configuracion de la disposicion del teclado
 exec_always --no-startup-id setxkbmap latam
 
@@ -193,9 +194,16 @@ mode "resize" {
 # bindsym $mod+r mode "resize"
 # ================ ESTETICA DEL TWM ==================
 
+exec_always --no-startup-id picom -b
+
 # Barra de estado polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+# aplitud de los bordes y sus pixeles
+#
+for_window [class="^.*"] border pixel 0
+
+
 # Espacios entre las ventanas
-gaps inner 2
-gaps outer 3
+gaps inner 7
+gaps outer 4
