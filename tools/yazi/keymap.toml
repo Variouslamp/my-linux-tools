@@ -1,11 +1,17 @@
-# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
-# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+# A TOML linter such as https://github.com/tombi-toml/tombi can use this schema to validate your config.
+# If you encounter any problems, please make an issue at https://github.com/yazi-rs/schemas.
+
+#:schema https://yazi-rs.github.io/schemas/keymap.json
 
 [mgr]
 
+prepend_keymap = [
+	{ on = "p", run = "plugin ucp paste notify", desc = "Paste" },
+	{ on = "y", run = "plugin ucp copy notify", desc = "Copy" }
+]
+
 keymap = [
-	{ on = "<C-x>", run = 'shell --confirm "wl-copy --type x-special/gnome-copied-files <<< \"copy\nfile://$(realpath \"$0\")\" && wl-copy --type text/uri-list <<< \"file://$(realpath \"$0\")\""', desc = "Copiar archivo para pegar en Apps (WhatsApp/Word)" },
+	{ on = "<C-x>", run = 'shell --interactive "wl-copy --type x-special/gnome-copied-files <<< \"copy\nfile://$(realpath \"$0\")\" && wl-copy --type text/uri-list <<< \"file://$(realpath \"$0\")\""', desc = "Copiar archivo para pegar en Apps (WhatsApp/Word)" },
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
 	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
 	{ on = "q",     run = "quit",               desc = "Quit the process" },
