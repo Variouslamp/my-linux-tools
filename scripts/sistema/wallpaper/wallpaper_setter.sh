@@ -14,6 +14,15 @@ elif [ "$1" == "auto" ]; then
 	SELECTED="${LIST[NUMERO]}"
 elif [ "$1" == "rofi" ]; then
 	SELECTED=$(ls $WAL_DIRECTORY | rofi -dmenu -p "select one")
+	# Si el texto es escrito manualmente se almacena el fondo con dicho nombre
+	MANUAL=$( echo "${LIST[@]}" | tr " " "\n" | grep -F "$SELECTED")
+	
+	# Condiciones que hacen que el programa no continue si hay errores
+	if [ -z $SELECTED ]; then # verifica si se ingreso un valor vacio de manra manual
+		exit 1 
+	elif [ -z $MANUAL ]; then # verifica si un valor manual existe
+		exit 1
+	fi
 fi
 
 
