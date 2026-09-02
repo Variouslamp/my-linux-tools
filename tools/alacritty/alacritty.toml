@@ -1,6 +1,6 @@
 [window]
 # Valor entre 0.0 (totalmente invisible) y 1.0 (totalmente opaco)
-opacity = 0.85
+opacity = 0.5
 
 [window.padding]
 x = 12  # Margen izquierdo y derecho en píxeles
