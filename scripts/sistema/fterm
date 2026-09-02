@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if hyprctl clients | grep "class: float-term" > /dev/null; then
-    hyprctl dispatch closewindow class:float-term
+    hyprctl dispatch 'hl.dsp.window.close({ window = "class:float-term" })'
 else
     kitty --class float-term &
 fi

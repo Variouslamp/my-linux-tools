@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Script el cual se enfoca en la automatizacion de la grabacion
+DIR="$HOME/Videos/screen-recorder"
+
+if [ ! -d "$DIR" ]; then
+    mkdir -p "$DIR"
+fi
+
+if [ -z $(pgrep -x "wf-recorder") ]; then
+    VIDEO="$DIR/$(date +'%d-%m-%Y_%H-%M').mp4"
+    wf-recorder -g "$(slurp)" -f "$VIDEO"
+    wl-copy "$VIDEO"
+else
+    pkill -INT wf-recorder
+    notify-send "Video guardado en $DIR"
+fi

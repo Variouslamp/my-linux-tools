@@ -1,0 +1,137 @@
+#!/usr/bin/env bash
+
+# --------------------------------------------------------------------------------------
+# Directorio done se almacenan las notas rapidas
+
+DIR_NOTES="$HOME/notes"
+LISTADO=($(ls -t "$DIR_NOTES"))
+cantidad=$(ls "$DIR_NOTES" | wc -l)
+
+if [ -z $1 ]; then
+    echo "Ninguna flag ha sido entregada usar '-h' para ver la lista de opciones"
+    exit 1
+fi
+
+# --------------------------------------------------------------------------------------
+# Ejecucion del listado de las notas con una flag de -l
+
+if [ $1 == "-l" ]; then
+    i=1
+    for archivo in $(ls -t "$DIR_NOTES"); do
+        echo "$i - $archivo"
+        ((i++))
+    done
+    exit 0
+fi
+
+# --------------------------------------------------------------------------------------
+# Flag que hace que se pueda ver con vista previa un archivo de notas seleccionado
+
+if [ $1 == "-p" ]; then
+    
+
+    if [ -z $2 ] ; then
+        echo "Ningun archivo de notas dado para la vista previa "
+        exit 1
+    elif (($2 <= 0)); then
+        echo "valor ingresado menor o igual que 0"
+        exit 1
+    elif (( $2 > $cantidad )); then
+        echo "Valor ingresado mayor a la cantidad de archivos de notas actuales"
+        exit 1
+    fi
+    
+    VALOR=$(($2 - 1))
+    NOTA=${LISTADO[$VALOR]}
+    cat $DIR_NOTES/$NOTA
+    exit 0
+fi
+
+# --------------------------------------------------------------------------------------
+# Flag que hace que se pueda ver con vista previa un archivo de notas seleccionado
+
+if [ $1 == "-n" ]; then
+
+    if [ -z $2 ] ; then
+        echo "Nombre de archivo no ingresado"
+        exit 1
+    fi
+    
+    NUEVO="$DIR_NOTES/$2"
+
+    touch $NUEVO 
+    $EDITOR $NUEVO
+    exit 0
+fi
+
+# --------------------------------------------------------------------------------------
+# Flag que hace que se pueda ver con vista previa un archivo de notas seleccionado
+
+if [ $1 == "-o" ]; then
+    
+    # Condicional que verifica si un numero de archivo entregado
+    if [ -z $2 ] ; then
+        echo "Ningun valor de archivos de notas dado"
+        exit 1
+    elif (($2 <= 0)); then
+        echo "valor ingresado menor o igual que 0"
+        exit 1
+    elif (( $2 > $cantidad )); then
+        echo "Valor ingresado mayor a la cantidad de archivos de notas actuales"
+        exit 1
+    fi
+
+    VALOR=$(($2 - 1))
+    $EDITOR "$DIR_NOTES/${LISTADO[$VALOR]}"
+    exit 0
+fi
+
+# --------------------------------------------------------------------------------------
+# Flag de eliminacion que notas creadas
+
+if [ $1 == "-d" ]; then
+
+    
+    # Condicional que verifica si un numero de archivo entregado
+    if [ -z $2 ] ; then
+        echo "Ningun valor de archivos de notas dado"
+        exit 1
+    elif (($2 <= 0)); then
+        echo "valor ingresado menor o igual que 0"
+        exit 1
+    elif (($2 > $cantidad)); then
+        echo "Valor ingresado mayor a la cantidad de archivos de notas actuales"
+        exit 1
+    fi
+
+    VALOR=$(($2 - 1))
+    NOTA=${LISTADO[$VALOR]}
+    echo "Estas seguro de eliminar '$NOTA' ?"
+    read -p "(s/N): " ELECCION
+
+    if [ $ELECCION == "s" ] || [ $ELECCION == "S" ]; then
+        echo " "
+        rm "$DIR_NOTES/${LISTADO[$VALOR]}" && echo "Eliminacion exitosa"
+        exit 0
+    fi
+    
+    echo " "
+    echo "Eliminacion cancelada"
+    exit 1
+
+fi
+
+# --------------------------------------------------------------------------------------
+# Flag que muestra ayuda sobre comandos
+
+if [ $1 == "-h" ]; then
+    echo "Ninguna flag ha sido entregada"
+    echo "Flags posibles: "
+    echo "-l     Lista de notas"
+    echo "-p     Vista previa de una nota especifica"
+    echo "-n     Creacion de nota nueva"
+    echo "-o     Abrir una nota especifica"
+    echo "-d     Eliminar nota especifica"
+    exit 0
+fi
+
