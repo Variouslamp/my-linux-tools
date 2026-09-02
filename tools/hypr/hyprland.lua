@@ -79,7 +79,7 @@ hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "SPACE", hl.dsp.window.float())
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "W", hl.dsp.exec_cmd("~/my-tools/scripts/sistema/wallpaper/wallpaper_setter.sh auto"))
 hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd("~/my-tools/scripts/sistema/wallpaper/wallpaper_setter.sh rofi"))
 hl.bind(mainMod .. " + " .. "F", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("/home/various/my-tools/scripts/sistema/browser/rofi_wallpaper_select.sh"))
+hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("/home/various/my-tools/scripts/sistema/browser/zen_profile_select.sh"))
 hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("~/my-tools/scripts/sistema/record"))
 hl.bind(mainMod .. " + " .. "L", hl.dsp.exec_cmd("~/my-tools/scripts/sistema/wallpaper/lock-screen"))
 
