@@ -57,9 +57,9 @@ tiling_drag modifier titlebar
 # Abrir gestor de archivos (yazi)
 bindsym $mod+e exec alacritty -e yazi
 # Abrir lanzador de aplicacione
-bindsym $mod+a exec "rofi -show drun"
+bindsym $mod+a exec "rofi -show drun -show-icons"
 # Abrir firefox
-bindsym $mod+b exec "firefox -P MAIN"
+bindsym $mod+b exec "/home/various/my-linux-tools/scripts/sistema/browser/zen_profile_select.sh"
 # Abrir whatsapp
 bindsym $mod+r exec "firefox -P WSP https://web.whatsapp.com/"
 # arajos de cambio de fondo
